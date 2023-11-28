@@ -5,7 +5,9 @@ archivo_notas: 'notas.txt'
 
 
 # ------ grupos de temas disponibles
-temas_disponibles: ['primero', 'segundo']
+temas_disponibles:
+  - primero
+  - segundo
 
 
 # ------ recursos de imagen por grupo de tema

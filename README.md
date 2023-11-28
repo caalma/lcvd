@@ -20,7 +20,24 @@ Además incorpora algunas funcionalidades para grabar y leer los códigos con qu
 Para ello requiere de un server local que necesita Python3. Y debe ser activado con el script `activar.py`.
 
 ## Instalación
+
 1. Clonar el repositorio. Por ejemplo: `git clone https://github.com/caalma/lcvd`.
 2. Instalar Python 3
 3. Instalar los requerimientos: `pip3 install -r requirements.txt
 `
+
+## Modo de uso
+
+El servidor local se inicia ejecutando `activar.py`. Recomiendo lanzarlo desde una terminal de comandos para volver a ejecutarlo en caso de modificar los seteos.
+
+## Configuración
+
+Para personalizarlo es necesario modificar ciertos valores en el documentos `seteos.yml`.
+
+Esos valores son:
+- `archivo_notas`: Es el nombre del archivo donde se almacenan las notas, que se ubica en la carpeta `./lc-notas/`
+- `temas_disponibles`: Lista de claves que permiten agrupar los distintos recursos. Es necesario para usar las funciones `i(n)` y `v(n)` que devuelven la url de la imagen o video correspondiente según el tema definido actualmente. Dichas urls son usadas luego para cargarlas desde `initImage` o `initVideo` de Hydra.
+
+- `recursos_imagen`: Lista de grupos que tienen listas de rutas relativas a las imágenes necesarias. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
+
+- `recursos_video`: Lista de grupos que tienen listas de rutas relativas a los videos necesarios. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
