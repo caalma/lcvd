@@ -1,0 +1,30 @@
+<!doctype html>
+<html data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/estilo.css">
+        <link rel="stylesheet" href="/static/css/highlight-prisma.css">
+        <link rel="stylesheet" href="/static/css/responsive.css">
+
+        <script src="/static/js/lib/bootstrap.bundle.min.js"></script>
+        <script src="/static/js/lib/prettier-standalone.js"></script>
+        <script src="/static/js/lib/prettier-babel.js"></script>
+        <script src="/static/js/lib/prism.min.js"></script>
+
+        <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+        <title>LCVD - {% block title %} {% endblock %}</title>
+
+        {% block header %} {% endblock %}
+    </head>
+    <body class="{{ pagina }}">
+        <div class="container-fluid">
+            {% block content %} {% endblock %}
+        </div>
+
+        <script src="/static/js/comun.js"></script>
+        {% block footer %} {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,21 @@
+@media (max-width: 800px){
+    .columna_principal {
+        display: block;
+        height: 50vh;
+    }
+
+    .columna_principal > div {
+        width: 100%;
+    }
+
+    #codigo_principal {
+        position: relative;
+        height: 52vh;
+    }
+
+    #editing, #highlighting {
+        height: 50vh;
+        width: calc(100% - 5px);
+    }
+
+}

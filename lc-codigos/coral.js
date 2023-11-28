@@ -1,0 +1,15 @@
+speed = 1
+let s = n => noise(1/n).rotate(Math.PI/(n)).scale(1/n)
+
+src(o0)
+.blend(s(-1))
+.blend(s(2))
+.blend(s(-3))
+.blend(s(4))
+.blend(s(-5))
+.blend(s(6))
+.colorearTime(.03,.02,.01)
+//.saturate(0.5)
+.contrast(0.7)
+.brightness(.1)
+.out(o0)

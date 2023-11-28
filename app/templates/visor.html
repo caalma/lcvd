@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Visor {% endblock %}
+
+{% block header %}
+<script src="/static/js/lib/hydra-synth.js"></script>
+<script src="/static/js/lib/p5.js"></script>
+<script src="/static/js/transicion.js"></script>
+<script src="/static/js/utiles-visor.js"></script>
+{% endblock %}
+
+{% block content %}
+<canvas id="vcanvas" width="800" height="600"></canvas>
+
+<div id="vcode">
+    <pre id="vcodehl" aria-hidden="true">
+        <code id="vcodehl-content" class="language-js"></code>
+    </pre>
+</div>
+{% endblock %}
+
+{% block footer %}
+<script src="/static/js/init-visor.js" defer></script>
+{% endblock %}

@@ -1,0 +1,25 @@
+---
+
+# documentos de notas actual
+archivo_notas: 'notas.txt'
+
+
+# ------ grupos de temas disponibles
+temas_disponibles: ['primero', 'segundo']
+
+
+# ------ recursos de imagen por grupo de tema
+# esta estructura es un ejemplo
+# basicamente requiere de grupos con nombre y dentro de llos listas de rutas que parten desde: /lc-recursos/imagenes/
+recursos_imagen:
+  primero:
+    - pri/1.jpg
+
+  segundo:
+    - seg/1.jpg
+
+
+# ------ recursos de video por grupo de temas
+# permite la misma estructura que recursos_imagen
+# basicamente requiere de grupos con nombre y dentro de llos listas de rutas que parten desde: /lc-recursos/videos/
+recursos_video: []

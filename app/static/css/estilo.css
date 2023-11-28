@@ -1,0 +1,187 @@
+* {
+    font-family: "Fira Code", monospace;
+    line-height: 1.4;
+    tab-size: 1;
+}
+body {
+    font-size: 15px;
+    background: #222;
+}
+
+/* --- clases generales */
+.cntrl input {
+    border: none;
+    padding: 5px;
+    font-size:0.9em;
+    border-radius: 4px;
+}
+.cntrl label {
+    color: #aaa;
+    padding: 3px
+}
+
+.codigo {
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+}
+
+.codigo.error {
+    box-shadow: 0 0 20px rgba(200,0,0, 1);
+}
+.codigo.ok {
+    box-shadow: 0 0 30px rgba(0,200,0, 1);
+}
+
+.codigo:focus, .cntrl input:focus {
+    outline: 1px dashed #aa6;
+}
+
+
+.textos {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.1em;
+}
+.textos:focus {
+   outline: 1px solid #6aa;
+}
+
+/* --- comando flash */
+#cmdflash {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+#cmdflash.activo { display:block; }
+
+#cmdflash textarea {
+    display: inline-block;
+    width: 60vw;
+    height: 50px;
+    color: #faf;
+}
+#cmdflash-hst {
+    display: inline-block;
+    width: 60vw;
+    color: #aaf;
+    padding: 0;
+}
+#cmdflash-hst li {
+    text-align: left;
+    background: #aaf;
+    color: #000;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin: 2px;
+}
+#cmdflash-hst li.actual {
+    background: #bff;
+}
+
+
+/* --- estado */
+#estado {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0,0,0,.8);
+    width: 100%;
+}
+#estado:empty {
+    display: none;
+}
+
+/* codigo secundario */
+#codigo_secundario {
+    background: #111;
+    color: #af0;
+}
+
+/* codigo control */
+#codigo_control {
+    background: #111;
+    color: #0af;
+}
+
+/* salida auxiliar */
+#auxiliar {
+    background: #036;
+    color: #fff;
+    max-height: 200px;
+}
+
+/* notas */
+#notas {
+    background: #424;
+    color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* codigo principal */
+#codigo_principal {
+    position: relative;
+    height: 100vh;
+}
+
+.columna_principal {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;;
+}
+
+.columna_principal > div {
+    width: 50%;
+}
+
+
+/* --- visor */
+
+body.visor {
+    background: #000;
+    overflow: hidden;
+}
+
+body.visor * {
+    cursor: none;
+}
+
+
+#vcanvas {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+#vcode {
+    position: absolute;
+    overflow: hidden;
+    padding:10px 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+}
+#vcode.centrado {
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+}

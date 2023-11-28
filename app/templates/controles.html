@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %} Controles {% endblock %}
+
+{% block header %}
+<script src="/static/js/auxiliar.js"></script>
+<script src="/static/js/notas.js"></script>
+<script src="/static/js/audio.js"></script>
+{% endblock %}
+
+
+{% block content %}
+
+<section class="controles">
+
+    <div class="columna_principal">
+        <div id="codigo_principal" title="C1. Evalua en visor.">
+            <textarea id="editing" class="codigo" placeholder="FLC!" spellcheck="false" oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);"></textarea>
+            <pre id="highlighting" aria-hidden="true">
+                <code id="highlighting-content" class="language-js"></code>
+            </pre>
+        </div>
+
+        <div>
+            <div title="C2. Evalua en visor.">
+                <textarea id="codigo_secundario" class="codigo" placeholder="SEC!" spellcheck="false"></textarea>
+            </div>
+
+            <div class="mt-3" title="C3. Evalua en controles.">
+                <textarea id="codigo_control" class="codigo mb-1" placeholder="CNT!" spellcheck="false"></textarea>
+                <code><pre id="auxiliar" class="textos" contenteditable="true"></pre></code>
+            </div>
+
+            <div>
+                <code><pre id="notas" class="textos" contenteditable="true" spellcheck="false"></pre></code>
+            </div>
+
+            <div class="p-2">
+                <div class="cntrl d-inline-block m-1">
+                    <label for="op-ima"><small>IMG</small></label><br>
+                    <input id="op-ima" type="number" value="1" min="0" max="1" step="0.1">
+                </div>
+
+                <div class="cntrl d-inline-block m-1">
+                    <label for="op-cod"><small>COD</small></label><br>
+                    <input id="op-cod" type="number" value="9" min="0" max="10" step="0.1">
+                </div>
+
+                <div class="cntrl d-inline-block m-1">
+                    <label for="velocidad"><small>SPEED</small></label><br>
+                    <input id="velocidad" type="number" value="1" min="-100" max="100" step="0.1">
+                </div>
+
+                <nav class="d-inline-block my-4">
+                    <button id="grabar-codigos" class="btn btn-success btn-small p-1"><small>Grabar SESIÓN</small></button>
+                    <a class="btn btn-primary btn-small p-1" href="/ayuda" target="_blank"><small>Abrir AYUDA</small></a>
+                    <a class="btn btn-warning btn-small p-1" href="/visor" target="_blank"><small>Abrir VISOR</small></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<code id="estado"></code>
+
+<div id="cmdflash">
+    <textarea id="cmdflash-cmp" class="codigo" placeholder="CMD!" spellcheck="false"></textarea>
+    <ul id="cmdflash-hst"></ul>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<script src="/static/js/init-controles.js" defer></script>
+
+{% endblock %}

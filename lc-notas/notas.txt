@@ -1,0 +1,2 @@
+Escribe aquí cualquier anotación.
+Al salir del campo se grabará para próximas sesiones.
