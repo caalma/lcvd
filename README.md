@@ -1,5 +1,6 @@
 # LCVD - Live Coding Visor Disociado
 
+
 Herramienta para editar y ejecutar código javascript en una pestaña disociada de los controles.
 
 Está pensado para usarse de forma offline, por eso incorpora las librerías de terceros.
@@ -19,6 +20,7 @@ Además incorpora algunas funcionalidades para grabar y leer los códigos con qu
 
 Para ello requiere de un server local que necesita Python3. Y debe ser activado con el script `activar.py`.
 
+
 ## Instalación
 
 1. Clonar el repositorio. Por ejemplo: `git clone https://github.com/caalma/lcvd`.
@@ -26,9 +28,17 @@ Para ello requiere de un server local que necesita Python3. Y debe ser activado 
 3. Instalar los requerimientos: `pip3 install -r requirements.txt
 `
 
+
 ## Modo de uso
 
 El servidor local se inicia ejecutando `activar.py`. Recomiendo lanzarlo desde una terminal de comandos para volver a ejecutarlo en caso de modificar los seteos.
+
+Una vez activo el servidor automáticamente llamará al navegador de internet predeterminado y cargará la pagina de controles.
+
+Manualmente abrir el visor desde el botón "Abrir VISOR".
+
+Para más información dirigirse a la página de ayuda incorporada.
+
 
 ## Configuración
 
