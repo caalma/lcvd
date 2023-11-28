@@ -24,4 +24,6 @@ recursos_imagen:
 # ------ recursos de video por grupo de temas
 # permite la misma estructura que recursos_imagen
 # basicamente requiere de grupos con nombre y dentro de llos listas de rutas que parten desde: /lc-recursos/videos/
-recursos_video: []
+recursos_video:
+  primero:
+    - pri/1.mp4
