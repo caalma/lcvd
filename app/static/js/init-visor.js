@@ -39,9 +39,7 @@ bc.addEventListener('message', async (ev) => {
     }
 });
 
-
 // --- inicializar
-loadScript('/static/js/hydra-parche-canvas_to_image.js');
 loadScript('/static/js/hydra-extend-src.js');
 loadScript('/static/js/hydra-extend-color.js');
 loadScript('/static/js/hydra-extend-coord.js');
