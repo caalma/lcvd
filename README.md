@@ -51,3 +51,12 @@ Esos valores son:
 - `recursos_imagen`: Lista de grupos que tienen listas de rutas relativas a las imágenes necesarias. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
 
 - `recursos_video`: Lista de grupos que tienen listas de rutas relativas a los videos necesarios. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
+
+
+## Pendiente
+
++ Incorporar tipografía Fira-Code - para uso offline.
++ Personalización de carpetas de para códigos y recursos.
++ Corregir interlineado en el código del visor. Se nota en tamaños chicos.
++ Programar memoria del historial para cmdflash.
++ Incorporar enlaces a tutoriales básicos sobre hydra en la ayuda.
