@@ -15,7 +15,7 @@ El concepto es trabajar con dos pestañas que se comunican entre sí. En una de 
 
 ![pestañas](./lcvd-paginas-m2.png)
 
-Además incorpora algunas funcionalidades para grabar y leer los códigos con que se está experimentando, y administrar algunos recursos extras como: videos, imagenes y audios.
+Además incorpora algunas funcionalidades para grabar y leer los códigos con que se está experimentando, y administrar algunos recursos extras como: videos, imágenes y audios.
 
 Para ello requiere de un server local que necesita Python3. Y debe ser activado con el script `activar.py`.
 
