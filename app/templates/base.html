@@ -4,14 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        {% if seteos.modo.offline %}
+        <link href="/static/css/tipografia.css" rel="stylesheet">
+        {% else %}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        {% endif %}
 
-        <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/estilo.css">
-        <link rel="stylesheet" href="/static/css/highlight-prisma.css">
-        <link rel="stylesheet" href="/static/css/responsive.css">
+        <link href="/static/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/estilo.css" rel="stylesheet">
+        <link href="/static/css/highlight-prisma.css" rel="stylesheet">
+        <link href="/static/css/responsive.css" rel="stylesheet">
 
         <script src="/static/js/lib/bootstrap.bundle.min.js"></script>
         <script src="/static/js/lib/prettier-standalone.js"></script>

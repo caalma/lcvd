@@ -7,6 +7,8 @@ Está pensado para usarse de forma offline, por eso incorpora las librerías de 
 
 Las tecnologías integradas son: hydra, p5js, bootstrap, prism, prettier.
 
+> IMPORTANTE: Este proyecto está en proceso de desarrollo. Las características no están estabilizadas, por esos pueden variar sin aviso.
+
 
 ## Lógica de funcionamiento
 
@@ -52,11 +54,13 @@ Esos valores son:
 
 - `recursos_video`: Lista de grupos que tienen listas de rutas relativas a los videos necesarios. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
 
+- `carpeta`: Es una estructura para personalizar las carpetas utilizadas.
+- `modo`: Aquí se agrupan características de la ejecución de la aplicación. Disponibles: `offline`.
+
 
 ## Pendiente
 
-+ Incorporar tipografía Fira-Code - para uso offline.
-+ Personalización de carpetas de para códigos y recursos.
 + Corregir interlineado en el código del visor. Se nota en tamaños chicos.
 + Programar memoria del historial para cmdflash.
 + Incorporar enlaces a tutoriales básicos sobre hydra en la ayuda.
++ Agregar ayuda de funcionalidades javascript disponibles.

@@ -1,14 +1,15 @@
 if(false){
 
-hush(); Cod.text('')
+Vis.reset()
+Vis.reload()
 
 Cod.text('LCVD: Hola !')
 Cod.opacity(5)
 Cod.size(3.9)
 Cod.center(true) 
 
-grabarImagen()
-
-recargar() // recarga pestaña visor
+Ima.resolution(200, 200)
+Ima.proportion('real')
+Ima.save('captura_01')
 
 }

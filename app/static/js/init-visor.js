@@ -46,4 +46,6 @@ loadScript('/static/js/hydra-extend-coord.js');
 loadScript('/static/js/hydra-extend-combine.js');
 loadScript('/static/js/hydra-extend-combinecoord.js');
 
+Ima.resolution(800,800)
+
 hEval('0-visuales-inicial');

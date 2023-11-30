@@ -32,6 +32,7 @@ def portada():
 
 @app.route('/controles/')
 def controles():
+    seteos = cfg
     pagina = 'controles'
     return render_template('controles.html', **locals())
 
@@ -40,6 +41,7 @@ def controles():
 
 @app.route('/visor/')
 def visor():
+    seteos = cfg
     pagina = 'visor'
     return render_template('visor.html', **locals())
 
@@ -48,6 +50,7 @@ ar_ayuda = './ayuda.md'
 
 @app.route('/ayuda/')
 def ayuda():
+    seteos = cfg
     pagina = 'ayuda'
     ayuda_html =  ''
     with open(ar_ayuda, 'r') as f:
@@ -58,7 +61,7 @@ def ayuda():
 
 # codigos
 
-ru_codigos = '../lc-codigos/'
+ru_codigos = '../' + cfg['carpeta']['codigos']
 
 @app.route('/codigos/', methods=('GET','POST'))
 def codigos_lista():
@@ -87,7 +90,7 @@ def codigo_grabar():
 
 # notas
 
-ru_notas = '../lc-notas/'
+ru_notas = '../' + cfg['carpeta']['notas']
 ar_notas = f'{ru_notas}{cfg["archivo_notas"]}'
 
 @app.route('/notas/', methods=('GET','POST'))
@@ -121,7 +124,8 @@ def recursos_video():
 
 
 # static de recursos imagen, video y audio
-ru_recursos_imagen = '../lc-recursos/imagenes/'
+
+ru_recursos_imagen = '../' + cfg['carpeta']['recursos']['imagen']
 @app.route('/static/imagenes/<path:archivo>', methods=('GET', 'POST'))
 def static_imagenes(archivo=''):
     r_doc = f'{ru_recursos_imagen}{archivo}'
@@ -130,19 +134,19 @@ def static_imagenes(archivo=''):
     else:
         return ''
 
-ru_recursos_video = '../lc-recursos/videos/'
-@app.route('/static/videos/<path:archivo>', methods=('GET', 'POST'))
-def static_videos(archivo=''):
-    r_doc = f'{ru_recursos_video}{archivo}'
+ru_recursos_audio = '../' + cfg['carpeta']['recursos']['audio']
+@app.route('/static/audios/<path:archivo>', methods=('GET', 'POST'))
+def static_audios(archivo=''):
+    r_doc = f'{ru_recursos_audio}{archivo}'
     if r_doc:
         return send_file(r_doc)
     else:
         return ''
 
-ru_recursos_audio = '../lc-recursos/audios/'
-@app.route('/static/audios/<path:archivo>', methods=('GET', 'POST'))
-def static_audios(archivo=''):
-    r_doc = f'{ru_recursos_audio}{archivo}'
+ru_recursos_video = '../' + cfg['carpeta']['recursos']['video']
+@app.route('/static/videos/<path:archivo>', methods=('GET', 'POST'))
+def static_videos(archivo=''):
+    r_doc = f'{ru_recursos_video}{archivo}'
     if r_doc:
         return send_file(r_doc)
     else:

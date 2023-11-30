@@ -1,3 +1,38 @@
+// ---  funcionalidades de visor
+const Vis = {
+    reset: () => {
+        hush();
+        Cod.text('');
+    },
+    reload: () => {
+        window.location.reload();
+    }
+}
+
+
+// ---  funcionalidades de imagen
+const Ima = {
+    resolution: (w = 800, h=800) => {
+        setResolution(w, h);
+    },
+    proportion: (e='adaptable') => {
+        if(e == 'adaptable'){
+            vcanvas.classList.remove('prop-real');
+            vcanvas.classList.add('prop-adaptable');
+        }else if(e == 'real'){
+            vcanvas.classList.remove('prop-adaptable');
+            vcanvas.classList.add('prop-real');
+        }
+    },
+    save: (nombre='lcvd-imagen-anonima', espera=0) => {
+        nombre_imagen_capturada = nombre;
+        setTimeout(()=> _hydra.saveFrame = true, espera * 1000);
+    }
+
+}
+
+
+
 // ---  controles de codigo
 const Cod = {
     text: (c) => {
@@ -23,14 +58,6 @@ const Cod = {
     opacity: (n=10 ) => {
         codigo_parent.style.opacity = n/10;
     }
-}
-
-
-
-// --- captura de imagen
-const grabarImagen = (nombre='lcvd-imagen-anonima', espera=0) => {
-    nombre_imagen_capturada = nombre;
-    setTimeout(()=> _hydra.saveFrame = true, espera * 1000);
 }
 
 

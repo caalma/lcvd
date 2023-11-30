@@ -163,11 +163,19 @@ body.visor * {
 #vcanvas {
     position: fixed;
     display: block;
+}
+#vcanvas.prop-adaptable {
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
     right: 0;
+}
+#vcanvas.prop-real {
+    max-width: 100vw;
+    max-height: 100vh;
+    left: 0;
+    top: 0;
 }
 
 #vcode {

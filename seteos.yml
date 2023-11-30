@@ -1,9 +1,5 @@
 ---
 
-# documentos de notas actual
-archivo_notas: 'notas.txt'
-
-
 # ------ grupos de temas disponibles
 temas_disponibles:
   - primero
@@ -27,3 +23,22 @@ recursos_imagen:
 recursos_video:
   primero:
     - pri/1.mp4
+
+
+# documentos de notas actual
+archivo_notas: 'notas.txt'
+
+
+# carpetas personalizadas
+carpeta:
+  codigos: './lc-codigos/'
+  notas: './lc-notas/'
+  recursos:
+    imagen: './lc-recursos/imagenes/'
+    audio: './lc-recursos/audios/'
+    video: './lc-recursos/videos/'
+
+
+# modos de ejecución
+modo:
+  offline: true

@@ -15,7 +15,7 @@ Aux.ver(tema_actual)
 
 tema(0)
 
-recargar() // recarga pestaña controles
-recargar(true, true) // recarga ambas pestañas
+Cnt.reload() // recarga pestaña controles
+Cnt.reload(true, true) // recarga ambas pestañas
 
 }
