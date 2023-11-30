@@ -55,6 +55,7 @@ Esos valores son:
 - `recursos_video`: Lista de grupos que tienen listas de rutas relativas a los videos necesarios. Los nombres de los grupos deben corresponder con los asignados en `temas_disponibles`.
 
 - `carpeta`: Es una estructura para personalizar las carpetas utilizadas.
+
 - `modo`: Aquí se agrupan características de la ejecución de la aplicación. Disponibles: `offline`.
 
 
