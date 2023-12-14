@@ -47,5 +47,3 @@ class Signos {
         return [this.ini(), this.dis()];
     }
 }
-
-module.exports = Signos;

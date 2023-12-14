@@ -142,8 +142,6 @@ const EOL = '\n',
       evChange = new Event('change'),
       evInput = new Event('input');
 
-const Signos = require('/static/js/clase-signos.js')
-
 let temas_disponibles,
     tema_actual,
     recursos_imagen,
